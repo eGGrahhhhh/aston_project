@@ -4,14 +4,37 @@ package org.example;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        printThreeWords();
+        checkSumSign();
+        printColor();
+
+    }
+
+    public static void printThreeWords() {
+        System.out.println("Orange");
+        System.out.println("Banana");
+        System.out.println("Apple");
+    }
+
+    public static void checkSumSign() {
+        int a = 2, b = 3;
+        int sum = a + b;
+        if (sum >= 0) {
+            System.out.println("Сумма положительна");
+        } else {
+            System.out.println("Сумма отрицательна");
+        }
+    }
+
+    public static void printColor() {
+        int value = -1;
+        if (value <= 0) {
+            System.out.println("Красный");
+        } else if (0 < value && value <= 100) {
+            System.out.println("Желтый");
+        } else {
+            System.out.println("Зеленый");
         }
     }
 }
