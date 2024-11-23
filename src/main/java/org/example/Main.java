@@ -1,4 +1,6 @@
 package org.example;
+import java.util.Arrays;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -11,6 +13,8 @@ public class Main {
         positiveOrNegativeNumber(1); //Задание 6
         positiveOrNegativeNumber2(1); //Задание 7
         printText("some text", 3); //Задание 8
+        leapYear(0);
+        swapper();
 
     }
 
@@ -79,5 +83,35 @@ public class Main {
         for (int i = 0; i < n; i++) {
             System.out.println(str);
         }
+    }
+
+    public static boolean leapYear(int a) {
+        if (a % 4 == 0) {
+            if (a % 400 == 0){
+                return true;
+            } else if (a % 100 == 0) {
+                return false;
+            }
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static void swapper() {
+        int[] arr = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
+        for (int i = 0; i < arr.length; i++) {
+            switch (arr[i]) {
+                case 0:
+                    arr[i] = 1;
+                    break;
+                case 1:
+                    arr[i] = 0;
+                    break;
+                default:
+                    break;
+            }
+        }
+        System.out.println(Arrays.toString(arr));
     }
 }
