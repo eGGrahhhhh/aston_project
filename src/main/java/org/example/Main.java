@@ -1,8 +1,9 @@
 package org.example;
 
 
-public class Employees {
+public class Main {
     public static void main(String[] args) {
+
         Person[] personsArray = new Person[5];
 
         personsArray[0] = new Person("Ivanov Ivan", "Engineer", "ivivan@gmail.com", "802312312", 30000, 30);
@@ -15,9 +16,7 @@ public class Employees {
             person.printInfo();
             System.out.println();
         }
-
     }
-
 }
 
 

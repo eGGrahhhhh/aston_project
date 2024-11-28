@@ -26,10 +26,4 @@ public class Person {
         System.out.println("Salary: " + salary);
         System.out.println("Age: " + age);
     }
-
-    public static void main(String[] args) {
-        Person person
-                = new Person("Ivanov Ivan", "Engineer", "ivivan@gmail.com", "802312312", 30000, 30);
-        person.printInfo();
-    }
 }
