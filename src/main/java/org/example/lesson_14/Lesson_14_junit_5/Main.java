@@ -6,4 +6,5 @@ public class Main {
         Factorial factorial = new Factorial();
         factorial.getFactorial(-2);
     }
+
 }

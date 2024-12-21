@@ -29,7 +29,6 @@ public class JunitTest {
         assertEquals(expectedResults[value], Factorial.getFactorial(value));
     }
 
-
     @DisplayName("Вычисление факториала отрицательных чисел")
     @ValueSource(ints = {-1, -2, -3, -4, -5})
     @ParameterizedTest
