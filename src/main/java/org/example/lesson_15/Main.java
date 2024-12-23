@@ -7,8 +7,6 @@ public class Main {
     public static void main(String[] args) {
 
         System.setProperty("webdriver.chrome.driver", "D:/AQA_ASTON/aston_project/src/main/resources");
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://google.com");
 
     }
 }
