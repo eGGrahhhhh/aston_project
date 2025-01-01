@@ -10,7 +10,6 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -93,24 +92,13 @@ public class MtsSetupTest {
     @Description("Проверка на соответствие надписям в placeholder для типа оплаты Задолженность")
     public void checkPlaceholderTextForScoreArrears() {
         homePage.selectTypePaymentServices("Задолженность");
-        //wait.until(ExpectedCondition.)
         assertEquals("Номер счета на 2073", homePage.getScoreText());
         assertEquals("Сумма", homePage.getSumText());
         assertEquals("E-mail для отправки чека", homePage.getEmailText());
     }
 
-
     @Order(5)
-    @Description("Проверка на соответствие надписям в placeholder для типа оплаты Задолженность")
-    @MethodSource("getValues")
-    @ParameterizedTest
-    public void checkDataPaymentServices(String value, String phoneNumber, String sum, String email) {
-        homePage.fillingDataPaymentServices(value, phoneNumber, sum, email);
-    }
-
-
-    @Order(6)
-    @Description("s")
+    @Description("Заполнение данных для типа оплаты 'Услуги связи' и проверка надписей в окне оплаты")
     @MethodSource("getValues")
     @ParameterizedTest
     public void paymentPageTest(String value, String phoneNumber, String sum, String email) {
