@@ -68,7 +68,7 @@ public class MtsSetupTest {
     }
 
     @Test
-    @Order(3)
+    @Order(4)
     @Description("Проверка на соответствие надписям в placeholder для типа оплаты Домашний интернет")
     public void checkPlaceholderTextForHomeInternet() {
         homePage.selectTypePaymentServices("Домашний интернет");
@@ -88,7 +88,7 @@ public class MtsSetupTest {
     }
 
     @Test
-    @Order(4)
+    @Order(3)
     @Description("Проверка на соответствие надписям в placeholder для типа оплаты Задолженность")
     public void checkPlaceholderTextForScoreArrears() {
         homePage.selectTypePaymentServices("Задолженность");
