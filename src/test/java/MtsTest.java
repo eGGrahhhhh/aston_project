@@ -1,4 +1,3 @@
-import net.bytebuddy.build.Plugin;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Order;
@@ -14,7 +13,6 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -35,6 +33,7 @@ public class MtsTest {
     public void driverTearDown() {
         driver.quit();
     }
+
 
     @Test
     @Order(1)
@@ -60,7 +59,7 @@ public class MtsTest {
 
     @Test
     @Order(4)
-    public void replenishmentTest() throws InterruptedException {
+    public void replenishmentTest() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         if (!driver.findElement(By.className("select__now")).getText().equals("Услуги связи")) {
